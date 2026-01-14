@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - GCB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/gcblogo.png" alt="GCB Logo">
+                <span class="nav-logo-text">Ghana Commercial Bank</span>
+            </a>
+            <ul class="nav-menu">
+                <li><span id="userName"></span></li>
+                <li><button id="logoutBtn" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">Logout</button></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="main-content">
+        <div class="container">
+            <div class="dashboard-container">
+                <header class="dashboard-header">
+                    <div class="logo">
+                        <img src="images/gcblogo.png" alt="GCB Logo">
+                        <p class="subtitle">Staff Portal</p>
+                    </div>
+                </header>
+            
+            <main class="dashboard-content">
+                <div class="welcome-section">
+                    <h2>Welcome, <span id="displayName"></span>!</h2>
+                    <p>You have successfully logged into the Ghana Commercial Bank Staff Portal.</p>
+                </div>
+                
+                <div class="dashboard-cards">
+                    <div class="dashboard-card">
+                        <div class="card-icon">👤</div>
+                        <h3>Staff Information</h3>
+                        <div class="card-content">
+                            <p><strong>Staff ID:</strong> <span id="staffID"></span></p>
+                            <p><strong>Department:</strong> <span id="department"></span></p>
+                            <p><strong>Email:</strong> <span id="email"></span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-icon">🔐</div>
+                        <h3>Security Status</h3>
+                        <div class="card-content">
+                            <p class="status-active">✓ Two-Factor Authentication Active</p>
+                            <p class="status-active">✓ Secure Session</p>
+                            <p id="sessionTimer">Session expires in: <span id="timer"></span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-icon">📊</div>
+                        <h3>Quick Actions</h3>
+                        <div class="card-content">
+                            <button class="btn btn-primary" style="width: 100%; margin-bottom: 10px;">View Resources</button>
+                            <button class="btn btn-secondary" style="width: 100%;">Account Settings</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About GCB</h4>
+                <p>Ghana Commercial Bank is committed to providing secure and reliable banking services to our customers and staff.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="login.html">Login</a></p>
+                <p><a href="signup.html">Sign Up</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <p>For technical support, please contact your IT department.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Ghana Commercial Bank. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="dashboard.js"></script>
+</body>
+</html>
+

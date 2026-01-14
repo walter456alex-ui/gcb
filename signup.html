@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - GCB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/gcblogo.png" alt="GCB Logo">
+                <span class="nav-logo-text">Ghana Commercial Bank</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="main-content">
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="logo">
+                    <img src="images/gcblogo.png" alt="GCB Logo">
+                    <p class="subtitle">Staff Registration</p>
+                </div>
+                
+                <!-- Step 1: Account Details -->
+                <div id="step1" class="form-step active">
+                    <h2>Create Your Account</h2>
+                    <form id="signupForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="staffID">Staff ID</label>
+                            <input type="text" id="staffID" name="staffID" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="department">Department</label>
+                            <select id="department" name="department" required>
+                                <option value="">Select Department</option>
+                                <option value="IT">IT (Information Technology)</option>
+                                <option value="HR">HR (Human Resources)</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Sales">Sales</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Operations">Operations</option>
+                                <option value="Customer Service">Customer Service</option>
+                                <option value="Network Engineering">Network Engineering</option>
+                                <option value="Security">Security</option>
+                                <option value="Legal">Legal</option>
+                                <option value="Procurement">Procurement</option>
+                                <option value="Administration">Administration</option>
+                                <option value="Executive">Executive</option>
+                                <option value="Cybersecurity">Cybersecurity</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required minlength="8">
+                            <small>Password must be at least 8 characters long</small>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Continue</button>
+                    </form>
+                    
+                    <div class="auth-footer">
+                        <p>Already have an account? <a href="login.html">Login here</a></p>
+                    </div>
+                </div>
+                
+                <!-- Step 2: QR Code Verification -->
+                <div id="step2" class="form-step">
+                    <h2>Set Up Two-Factor Authentication</h2>
+                    <div class="qr-instructions">
+                        <p><strong>Step 1:</strong> Download Google Authenticator app on your mobile device if you haven't already.</p>
+                        <p><strong>Step 2:</strong> Scan the QR code below with the app:</p>
+                    </div>
+                    
+                    <div class="qr-container">
+                        <img id="qrCode" src="" alt="QR Code" style="display: none;">
+                        <div id="qrLoader" class="loader"></div>
+                    </div>
+                    
+                    <div class="manual-entry" style="display: none;">
+                        <p><strong>Can't scan?</strong> Enter this code manually:</p>
+                        <code id="manualSecret"></code>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 20px;">
+                        <label for="verifyToken">Enter 6-digit code from Google Authenticator</label>
+                        <input type="text" id="verifyToken" name="verifyToken" maxlength="6" pattern="[0-9]{6}" placeholder="000000" required>
+                    </div>
+                    
+                    <button type="button" id="verifyBtn" class="btn btn-primary btn-block">Verify & Complete Signup</button>
+                    <button type="button" id="backBtn" class="btn btn-secondary btn-block" style="margin-top: 10px;">Back</button>
+                </div>
+                
+                <div id="errorMessage" class="error-message" style="display: none;"></div>
+                <div id="successMessage" class="success-message" style="display: none;"></div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About GCB</h4>
+                <p>Ghana Commercial Bank is committed to providing secure and reliable banking services to our customers and staff.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="login.html">Login</a></p>
+                <p><a href="signup.html">Sign Up</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <p>For technical support, please contact your IT department.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Ghana Commercial Bank. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="signup.js"></script>
+</body>
+</html>
+
